@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop Services</title>
+    <style>
+        body {
+            background-image: url('barber_logo.avif');
+            background-color: white;
+            color: white;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .left {
+            position: absolute;
+            left: 34px;
+            top: 0;
+        }
+        .left img {
+            width: 100px;
+            margin: 10px;
+            padding: 0;
+        }
+        .right {
+            position: absolute;
+            right: 34px;
+            top: 22px;
+        }
+        .mid {
+            position: absolute;
+            top: 0;
+            left: 36%;
+            color: white;
+        }
+        hr {
+            margin-top: 37em;
+        }
+        .btn {
+            margin: 0 9px;
+            color: white;
+            background-color: black;
+            padding: 3px 4px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .navbar {
+            display: inline-block;
+        }
+        .navbar li {
+            display: inline-block;
+        }
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 32px 23px;
+        }
+        .navbar li a:hover, .navbar li a.active {
+            text-decoration: underline;
+            color: grey;
+        }
+        .left1, .mid1, .right1 {
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+        }
+        .left1 {
+            left: 8%;
+            top: 25%;
+        }
+        .mid1 {
+            left: 32%;
+            top: 25%;
+        }
+        .right1 {
+            left: 65%;
+            top: 25%;
+        }
+        .left1 img, .mid1 img, .right1 img {
+            width: 200px;
+            margin: 10px;
+            padding: 0;
+            height: 150px;
+        }
+        .heads {
+            display: inline-block;
+            position: absolute;
+            top: 12%;
+            left: 15%;
+            width: 60%;
+            margin: 2px;
+        }
+        .text1 {
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .left, .right {
+                position: static;
+            }
+            .navbar li {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .navbar {
+                position: static;
+                text-align: center;
+            }
+            .navbar li {
+                display: block;
+            }
+            .left, .right {
+                position: static;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="barber_logo.avif" alt="Barber Shop Logo">
+            <div>Barber & Co</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="home_page.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="heads">
+        <h1 class="text1">Discover Our Barber Services</h1>
+    </div>
+    <div class="left1">
+        <h3>Haircuts</h3>
+        <img src="haircut.jpg" alt="Haircut">
+    </div>
+    <div class="mid1">
+        <h3>Shaves</h3>
+        <img src="shave.jpg" alt="Shave">
+    </div>
+    <div class="right1">
+        <h3>Beard Styling</h3>
+        <img src="beard_styling.jpeg" alt="Beard Styling">
+    </div>
+    <footer class="footer">
+        <hr>
+        <h2>Welcome to Our Barber Shop</h2>
+        <p>Welcome to Barber & Co, where style meets expertise! Our barbers are dedicated to providing top-notch services to make you look and feel your best. From classic haircuts to modern beard styling, we've got you covered. Book your appointment today and experience the difference!</p>
+    </footer>
+</body>
+</html>

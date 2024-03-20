@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+</head>
+<style>
+    body {
+        background-image: url('barber_bg.jpg');
+        margin: 0;
+        color: white;
+        padding: 0;
+        overflow: hidden;
+    }
+    .left {
+        display: inline-block;
+        position: absolute;
+        left: 34px;
+        text-align: center;
+        top: 0;
+    }
+    .left img {
+        width: 100px;
+        margin: 10px;
+        padding: 0;
+    }
+    .mid {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+    }
+    .right {
+        position: absolute;
+        right: 34px;
+        top: 22px;
+        display: inline-block;
+    }
+    .navbar {
+        display: inline-block;
+    }
+    .navbar li {
+        display: inline-block;
+    }
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        padding: 32px 23px;
+    }
+    .navbar li a:hover,
+    .navbar li a.active {
+        text-decoration: underline;
+        color: grey;
+    }
+    .btn {
+        margin: 0 9px;
+        background-color: black;
+        color: white;
+        padding: 3px 4px;
+        border-color: gray;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .btn:hover {
+        background-color: gray;
+    }
+    .container {
+        margin: 2px 2px;
+        width: 30%;
+        padding: 140px 200px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: x-large;
+    }
+    .bottom {
+        margin: 2px 2px;
+        width: 30%;
+        padding-left: 900px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: x-large;
+    }
+    .text1 {
+        animation: fadeIn1 1s ease-in-out;
+    }
+    @keyframes fadeIn1 {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .text2 {
+        animation: fadeIn2 5s;
+    }
+    @keyframes fadeIn2 {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .navbar li {
+            float: none;
+        }
+        .left, .right {
+            position: static;
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .container {
+            padding: 50px;
+        }
+        .bottom {
+            padding: 20px;
+        }
+    }
+</style>
+<body>
+<header class="header">
+    <div class="mid">
+        <ul class="navbar">
+            <li><a href="home_page.html">HOME</a></li>
+            <li><a href="services.html">SERVICES</a></li>
+            <li><a href="contact.html">APPOINTMENTS</a></li>
+        </ul>
+    </div>
+    <div class="left">
+        <img src="barber_logo.avif">
+        <div>BARBER & CO</div>
+    </div>
+    <div class="right">
+        <button class="btn">Call Us Now</button>
+        <button class="btn">Email Us</button>
+    </div>
+</header>
+<div class="container">
+    <h2 class="text1">WELCOME TO BARBER & CO</h2>
+</div>
+<footer class="footer">
+    <div class="bottom">
+        <h2 class="text2">BOOK AN APPOINTMENT TODAY</h2>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>About Us - Barber Shop</title>
+    <style>
+        body {
+            background-image: url('barber_bg.avif');
+            background-color: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            background-position: center center;
+            background-attachment: fixed;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .left {
+            display: inline-block;
+            position: absolute;
+            left: 34px;
+            text-align: center;
+            top: 0;
+        }
+
+        .left img {
+            width: 100px;
+            margin: 10px;
+            padding: 0px;
+        }
+
+        .right {
+            display: inline-block;
+            position: absolute;
+            right: 34px;
+            top: 22px;
+        }
+
+        .mid {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 36%;
+            color: white;
+        }
+
+        .btn {
+            margin: 0px 9px;
+            color: white;
+            background-color: black;
+            padding: 3px 4px;
+            border-color: gray;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+        }
+
+        .navbar li a {
+            color: white;
+            text-decoration: none;
+            padding: 32px 23px;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            text-decoration: underline;
+            color: grey;
+        }
+
+        .form {
+            border: 2px solid white;
+            border-radius: 24px;
+            display: inline-block;
+            position: absolute;
+            top: 8%;
+            left: 65%;
+            margin: 117px 38px;
+            padding: 75px 50px;
+            backdrop-filter: blur(2px);
+        }
+
+        .form_group {
+            text-align: center;
+        }
+
+        .black {
+            border: 1px solid grey;
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+
+        .heads {
+            display: inline-block;
+            position: absolute;
+            top: 12%;
+            left: 2%;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .text1 {
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .form {
+                width: 80%;
+                left: 10%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .form {
+                width: 90%;
+                left: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="barber_logo.avif" alt="Barber Shop Logo">
+            <div>BARBER &amp; CO</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="home_page.html">HOME</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="right">
+            <button class="btn">Call us now</button>
+            <button class="btn">Email us</button>
+        </div>
+    </header>
+    <div class="form">
+        <form onsubmit="return validateForm()">
+            <h1>BOOK AN APPOINTMENT</h1>
+            <div class="form_group">
+                <input type="text" class="black" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <br>
+            <div class="form_group">
+                <input type="text" class="black" id="contact" name="contact" placeholder="Enter your contact">
+            </div>
+            <br>
+            <div class="form_group">
+                <input type="text" class="black" id="email" name="email" placeholder="Enter your Email">
+            </div>
+            <br>
+            <div class="form_group">
+                <button class="btn" type="submit">BOOK</button>
+            </div>
+        </form>
+    </div>
+    <div class="heads">
+        <h1 class="text1">EXPERT BARBERS, EXCEPTIONAL SERVICES</h1>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var contact = document.getElementById("contact").value;
+            var email = document.getElementById("email").value;
+            if (name == "" || contact == "" || email == "") {
+                alert("Please fill in all fields.");
+                return false;
+            }
+            alert("Appointment booked successfully!");
+            return true;
+        }
+    </script>
+
+</body>
+
+</html>
