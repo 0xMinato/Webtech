@@ -16,7 +16,10 @@ I am a student at the University of Petroleum Engineering, Dehradun, pursuing a 
 ## 🛠 Skills
 Javascript, HTML, CSS, Java, Python,
 
-#
+## VISIT THE WEBPAGE
+
+[![Visit My HTML Page](CLICK HERE!)](https://0xMinato.github.io/Webtech/home_page.html)
+
 
 
 ## Optimizations
